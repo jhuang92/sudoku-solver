@@ -137,6 +137,27 @@ function main() {
     [1, 2, 0, 8, 0, 0, 0, 0, 4]
   ];
 
+  var isFilledList = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  ];
+  for (var i in originalGrid) {
+    for (var j in originalGrid[i]) {
+      if (originalGrid[i][j] !== 0) {
+        isFilledList[i][j] = 1;
+      }
+    }
+  }
+
+  console.log(isFilledList);
+
   var newGrid = originalGrid;
 
   for (var i = 0; i < originalGrid.length; i++) {

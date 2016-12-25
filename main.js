@@ -126,15 +126,15 @@ function BeautifyGrid(newGrid) {
 function main() {
   // Creating 9x9 Grid
   var originalGrid = [
-    [1, 4, 0, 0, 5, 0, 7, 0, 6],
-    [2, 0, 0, 0, 0, 0, 3, 0, 5],
-    [0, 0, 8, 0, 0, 0, 0, 1, 2],
-    [9, 8, 0, 0, 7, 4, 5, 2, 1],
-    [0, 1, 0, 0, 2, 0, 0, 9, 0],
-    [4, 2, 5, 8, 1, 0, 0, 3, 7],
-    [8, 3, 0, 0, 0, 0, 2, 0, 0],
-    [6, 0, 4, 0, 0, 0, 0, 0, 3],
-    [7, 0, 2, 0, 3, 0, 0, 6, 9]
+    [3, 0, 0, 0, 0, 4, 0, 2, 6],
+    [0, 0, 0, 9, 0, 0, 5, 0, 0],
+    [8, 0, 5, 0, 0, 6, 9, 4, 1],
+    [0, 1, 0, 3, 0, 0, 2, 6, 0],
+    [5, 0, 8, 1, 2, 7, 4, 0, 3],
+    [0, 3, 9, 0, 0, 8, 0, 1, 0],
+    [9, 5, 6, 7, 0, 0, 1, 0, 2],
+    [0, 0, 4, 0, 0, 2, 0, 0, 0],
+    [1, 2, 0, 8, 0, 0, 0, 0, 4]
   ];
 
   var newGrid = originalGrid;
@@ -144,6 +144,10 @@ function main() {
       var missingGridNums = GetGridMissingNums(originalGrid, [i, j]);
       var missingRowNums = GetMissingRowNum(originalGrid, i);
       var missingColNums = GetMissingColNum(originalGrid, j);
+      for (var k in missingGridNums) {
+
+      }
+
       console.log(`Grid X${i}${j}: ` + missingGridNums);
       console.log(`Row X${i}${j}: ` + missingRowNums);
       console.log(`Col X${i}${j}: ` + missingColNums);
